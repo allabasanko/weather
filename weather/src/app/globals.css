@@ -1,0 +1,165 @@
+:root {
+  /* Base */
+  --color-bg: #0f172a;         
+  --color-surface: #1e293b;    
+  --color-surface-alt: #334155; 
+  --color-border: #475569;      
+
+  /* Text */
+  --color-text: #f8fafc;    
+  --color-muted: #94a3b8;  
+  --color-inverse: #0f172a; 
+
+  /* Primary palette */
+  --color-primary: #38bdf8;
+  --color-primary-dark: #0284c7;
+  --color-primary-light: #bae6fd;
+
+  /* Secondary palette */
+  --color-secondary: #6366f1;
+  --color-secondary-dark: #4338ca;
+  --color-secondary-light: #c7d2fe;
+
+  /* Accent palette */
+  --color-accent: #facc15;
+  --color-accent-dark: #eab308;
+  --color-accent-light: #fef9c3;
+
+  /* Status colors */
+  --color-error: #ef4444;
+  --color-error-dark: #b91c1c;
+  --color-success: #22c55e;
+  --color-success-dark: #15803d;
+  --color-warning: #f97316;
+  --color-info: #0ea5e9;
+}
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin & padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set sensible defaults */
+html,
+body {
+  height: 100%;
+}
+
+/* Reset lists */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images & media */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Form elements */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: theme("fontFamily.sans"); */
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 40px 20px;
+  gap: 20px;
+
+  @media screen and (max-width: 1280px) {
+    max-width: 90%;
+  }
+  @media screen and (min-width: 1560px) {
+    max-width: 1280px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-background);
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  background-color: var(--color-header-bg);
+  color: var(--color-header-text);
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  margin: 0 20px;
+}
+
+.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: var(--color-accent);
+}

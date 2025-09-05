@@ -1,0 +1,1 @@
+export { weatherIconMap } from './weatherIcons';
