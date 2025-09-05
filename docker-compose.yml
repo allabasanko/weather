@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  frontend:
+    build: ./weather
+    container_name: weather-fe
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./weather/.env.local
+    environment:
+      NEXT_PUBLIC_API_URL: http://192.168.11.245:3001
+    depends_on:
+      - backend
+
+  backend:
+    build: ./weather-be
+    container_name: weather-be
+    ports:
+      - "3001:3001"
+    env_file:
+      - ./weather-be/.env
